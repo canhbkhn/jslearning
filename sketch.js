@@ -52,6 +52,6 @@ class Bubble{
 		stroke(255);
 		strokeWeight(4);
 		noFill();
-		ellipse(this.x,this.y,50,50);
+		ellipse(this.x,this.y,this.r,this.r);
 	}
 }
