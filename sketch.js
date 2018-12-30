@@ -9,8 +9,8 @@ function setup() {
 	background(220);
 	bubble1 =  new Bubble(100,100);
 	bubble2 =  new Bubble(200,200,100);
-  print("bb1",bubble1.x, bubble1.y);
-  print("bb2",bubble2.x, bubble2.y);
+  print("bb1",bubble1.x, bubble1.y, bubble1.r);
+	print("bb2",bubble2.x, bubble2.y, bubble2.r);
 }
 
 function draw() {
@@ -51,7 +51,14 @@ class Bubble{
 	show(){
 		stroke(255);
 		strokeWeight(4);
-		noFill();
+		//noFill(6);
+		fill(150);
+
+		print(dist(bubble1.x, bubble1.y, bubble2.x, bubble2.y)); // dist(x1,y1,x2,y2)
+
+		if(dist(bubble1.x, bubble1.y, bubble2.x, bubble2.y) <= 100){
+			fill(255);
+		}
 		ellipse(this.x,this.y,this.r,this.r);
 	}
 }
